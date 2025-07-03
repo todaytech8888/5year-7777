@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐成AI智能自动复利交易系统 - 策略报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Cool & Composed -->
+    <!-- Application Structure Plan: A single-page, top-down narrative report designed for clarity and impact. It starts with a strong headline, followed by key performance indicators (KPIs) in prominent cards for an immediate overview. The core of the page is the equity curve chart, providing visual proof of performance. This is followed by detailed sections on the strategy's core advantages (the 'Trinity' filter system), its exceptional risk control, and its stable profitability. The page concludes with clear call-to-action buttons for downloading detailed reports. This structure guides the user from high-level results to deep-dive explanations, making complex information easily digestible. -->
+    <!-- Visualization & Content Choices: KPIs are presented as large numbers in styled HTML divs (Goal: Inform). The equity curve is an image placeholder, as raw data isn't available for a JS chart (Goal: Change). The filter system is explained using a three-column grid with icons (Unicode) and text (Goal: Organize). Download links are styled as buttons (Goal: Action). This approach avoids SVG/Mermaid and uses clean HTML/CSS for a professional look, focusing on readability and key takeaways. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .kpi-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #0ea5e9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .kpi-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #64748b;
+        }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background-color: #0ea5e9;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #0284c7;
+        }
+        .btn-secondary {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+        .btn-secondary:hover {
+            background-color: #cbd5e1;
+        }
+        h1, h2, h3 {
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold">乐成AI智能自动复利交易系统</h1>
+            <p class="text-xl text-slate-500 mt-4">风险控制与稳定盈利的典范</p>
+        </header>
+
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="kpi-card">
+                    <p class="kpi-label">总净利润</p>
+                    <p class="kpi-value text-green-600">+$7,328</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">盈利因子</p>
+                    <p class="kpi-value text-sky-600">1.81</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">最大回撤</p>
+                    <p class="kpi-value text-amber-600">18.14%</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">胜率</p>
+                    <p class="kpi-value text-sky-600">68.49%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20 text-center">
+            <h2 class="text-3xl font-bold mb-4">五年业绩表现</h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">策略净值曲线平滑向上，展示了强大的稳定性和穿越牛熊的抗风险能力。</p>
+            <div class="bg-white p-4 rounded-xl shadow-lg">
+                <img src="https://i.imgur.com/your-equity-curve-image.png" alt="策略净值曲线图" class="w-full h-auto rounded-md">
+                <p class="text-sm text-slate-400 mt-2">注：请将此图片替换为您回测报告中的 `xu第三阶段5年测试优最终报告.gif` 文件。</p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">策略核心优势</h2>
+                <p class="mt-4 text-lg max-w-3xl mx-auto text-slate-600">独创的“三位一体”智能过滤系统，确保只在最有利的市场条件下执行交易。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-4xl text-sky-500 mb-4">📈</div>
+                    <h3 class="text-xl font-bold mb-2">宏观趋势判断</h3>
+                    <p class="text-slate-600">运用200周期EMA判断长期市场方向，确保只顺应大势，避免逆势交易带来的不必要风险。</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-4xl text-sky-500 mb-4">💪</div>
+                    <h3 class="text-xl font-bold mb-2">趋势强度确认</h3>
+                    <p class="text-slate-600">利用ADX指标衡量趋势的“力量”，有效过滤大量充满不确定性的盘整行情。</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-4xl text-sky-500 mb-4">⏰</div>
+                    <h3 class="text-xl font-bold mb-2">黄金时段锁定</h3>
+                    <p class="text-slate-600">只在伦敦/纽约重叠的黄金时段交易，最大化盈利潜力，规避低流动性风险。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20 bg-white p-8 md:p-12 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">卓越的抗风险能力</h2>
+                    <p class="text-lg text-slate-600 mb-6">对于投资者而言，控制回撤、保护本金是长期生存的基石。本策略在这方面表现堪称典范。</p>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><div><strong class="text-slate-800">极低回撤：</strong>最大回撤仅为18.14%，远低于行业30%的风险阈值。</div></li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><div><strong class="text-slate-800">超高胜率：</strong>68.49%的胜率极大缓解交易者心理压力，易于坚持。</div></li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><div><strong class="text-slate-800">动态风控：</strong>采用1%账户余额的动态风险模型，自动调整仓位，保护本金。</div></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">稳定且可观的盈利</h2>
+                    <p class="text-lg text-slate-600 mb-6">在严格风控的前提下，策略依然展现了强大的、可持续的盈利能力。</p>
+                     <ul class="space-y-4 text-slate-700">
+                        <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><div><strong class="text-slate-800">7倍增长：</strong>5年内将$1000初始资金增长至$8328。</div></li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><div><strong class="text-slate-800">健康模型：</strong>盈利因子高达1.81，每亏损1美元，能赚回1.81美元。</div></li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold mr-2">✔</span><div><strong class="text-slate-800">动态止盈：</strong>采用基准线追踪止损，积小胜为大胜，是高胜率和低回撤的保障。</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <h2 class="text-3xl font-bold mb-4">下载完整报告</h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">获取详细的PDF分析报告和原始测试数据，深入了解策略的每一个细节。</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="./最终报告.pdf" class="btn btn-primary w-full sm:w-auto">下载PDF详细报告</a>
+                <a href="./xu第三阶段5年测试优最终报告.htm" class="btn btn-secondary w-full sm:w-auto">查看原始测试数据</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center py-8 border-t border-slate-200">
+        <p class="text-slate-500">&copy; 2025 乐成AI智能自动复利交易系统. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
